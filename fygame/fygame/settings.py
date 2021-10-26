@@ -44,8 +44,8 @@ DOWNLOAD_DELAY = 1
 DEFAULT_REQUEST_HEADERS = {
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
     'Accept-Language': 'en',
-    'User-Agent': random.choices(ua_list),
-    'Cookie': 'PHPSESSID=27mtgaqna5igqci1lc6itt7mu2'
+    'User-Agent': random.choice(ua_list),
+    # 'Cookie': 'PHPSESSID=27mtgaqna5igqci1lc6itt7mu2'
 }
 
 # Enable or disable spider middlewares
@@ -93,7 +93,7 @@ ITEM_PIPELINES = {
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
-MONGO_URI = 'mongodb://101.132.136.13:27018/'
-MONGO_USER = 'wzh'
-MONGO_PWD = 'wzh521..'
-MONGO_DB = 'gamedata'
+MONGO_URI = ''
+MONGO_USER = ''
+MONGO_PWD = ''
+MONGO_DB = ''

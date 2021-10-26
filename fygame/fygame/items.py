@@ -18,8 +18,5 @@ class FygameItem(scrapy.Item):
     gImages = scrapy.Field()  # 介绍图片
     gVideo = scrapy.Field()  # 短cg
     gContext = scrapy.Field()  # 游戏介绍
-    gBaidu = scrapy.Field()  # 百度云链接
-    gCode = scrapy.Field()  # 游戏激活码
-    gCheckCode = scrapy.Field()  # 百度云验证码
-    gTyyLink = scrapy.Field()  # 天翼云链接
+    gCardSecret = scrapy.Field()  # 卡密
     gIsDelete = scrapy.Field() #是否删除

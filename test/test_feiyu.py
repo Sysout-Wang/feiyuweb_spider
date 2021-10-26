@@ -12,7 +12,7 @@ class FySpider(object):
         self.url_pro = "http://www.key173.com/?type=productinfo&id=1978"
         self.headers = {
             'user-agent': random.choice(ua_list),
-            'cookie': 'PHPSESSID=j3q9fq78uag25fku83akfbpkl3'
+            'cookie': 'PHPSESSID=27mtgaqna5igqci1lc6itt7mu2'
         }
 
     def parse_page(self):
@@ -25,9 +25,9 @@ class FySpider(object):
         # item['gPhoto'] =
         item['gTime'] = parse_page.xpath('//span[@class="meta-date"]//time/text()')[0].strip()
         item['gClass'] = parse_page.xpath('//div[@class="breadcrumbs"]/a[2]/text()')[0].strip()
-        # item['gImages'] =
+        item['gImages'] = parse_page.xpath('//div[@class="entry-content u-text-format u-clearfix"]//img/@src')
         item['gVideo'] = parse_page.xpath('//video/source[2]/@src')[0].strip()
-        # item['gContext'] =
+        item['gContext'] = parse_page.xpath('//div[@class="entry-content u-text-format u-clearfix"]//p/text()')
 
         url_tmp = self.url_site+parse_page.xpath('//div[@class="pay-box"]/a/@href')[0].strip()
         item['gCode'], item['gTyyLink'], item['gBaidu'], item['gCheckCode'] = self.parse_link(url_tmp)
